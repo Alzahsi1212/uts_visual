@@ -1,10 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2023/06/22 19.44.15.145,=C:\Users\Alzahsi12\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2023/06/22 19.47.48.154,D:\belajar\P. Visual\2110010399_M. Alzahsi Ansari\uts_visual\Unit1.pas=C:\Users\Alzahsi12\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2023/06/22 19.47.48.154,D:\belajar\P. Visual\2110010399_M. Alzahsi Ansari\uts_visual\Unit1.dfm=C:\Users\Alzahsi12\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2023/06/22 19.48.26.062,D:\belajar\P. Visual\2110010399_M. Alzahsi Ansari\uts_visual\latihan_kalkulator.dproj=C:\Users\Alzahsi12\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
-    <Transaction>2023/06/22 19.54.38.360,=D:\belajar\P. Visual\2110010399_M. Alzahsi Ansari\uts_visual\Unit2.pas</Transaction>
+	<Transactions>
+    <Transaction>1899/12/30 00.00.00.000.884,=D:\belajar\P. Visual\2110010399_M. Alzahsi Ansari\uts_visual\Unit3.pas</Transaction>
+    <Transaction>1899/12/30 00.00.00.000.145,=C:\Users\Alzahsi12\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899/12/30 00.00.00.000.062,C:\Users\Alzahsi12\Documents\Embarcadero\Studio\Projects\Project1.dproj=D:\belajar\P. Visual\2110010399_M. Alzahsi Ansari\uts_visual\latihan_kalkulator.dproj</Transaction>
+    <Transaction>1899/12/30 00.00.00.000.360,=D:\belajar\P. Visual\2110010399_M. Alzahsi Ansari\uts_visual\Unit2.pas</Transaction>
+    <Transaction>1899/12/30 00.00.00.000.154,C:\Users\Alzahsi12\Documents\Embarcadero\Studio\Projects\Unit1.dfm=D:\belajar\P. Visual\2110010399_M. Alzahsi Ansari\uts_visual\Unit1.dfm</Transaction>
+    <Transaction>1899/12/30 00.00.00.000.154,C:\Users\Alzahsi12\Documents\Embarcadero\Studio\Projects\Unit1.pas=D:\belajar\P. Visual\2110010399_M. Alzahsi Ansari\uts_visual\Unit1.pas</Transaction>
+    <Transaction>2023/06/24 18.29.22.628,D:\belajar\P. Visual\2110010399_M. Alzahsi Ansari\uts_visual\Unit3.pas=</Transaction>
+    <Transaction>2023/06/24 18.29.29.490,=D:\belajar\P. Visual\2110010399_M. Alzahsi Ansari\uts_visual\Unit4.pas</Transaction>
+    <Transaction>2023/06/24 18.30.06.260,=D:\belajar\P. Visual\2110010399_M. Alzahsi Ansari\uts_visual\Unit3.pas</Transaction>
   </Transactions>
 </BorlandProject>

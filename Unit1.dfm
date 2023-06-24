@@ -24,6 +24,7 @@ object Form1: TForm1
       Caption = 'Tugas Mandiri'
       object ugas11: TMenuItem
         Caption = 'Tugas 1'
+        OnClick = ugas11Click
       end
     end
   end
