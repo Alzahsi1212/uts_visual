@@ -13,8 +13,10 @@ type
     Latihan2: TMenuItem;
     Latihan11: TMenuItem;
     ugas11: TMenuItem;
+    Latihan21: TMenuItem;
     procedure Latihan11Click(Sender: TObject);
     procedure ugas11Click(Sender: TObject);
+    procedure Latihan21Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -28,11 +30,16 @@ implementation
 
 {$R *.dfm}
 
-uses Unit2, Unit3;
+uses Unit2, Unit3, Unit4;
 
 procedure TForm1.Latihan11Click(Sender: TObject);
 begin
 Kalkulator.ShowModal;
+end;
+
+procedure TForm1.Latihan21Click(Sender: TObject);
+begin
+Form4.ShowModal;
 end;
 
 procedure TForm1.ugas11Click(Sender: TObject);

@@ -19,6 +19,10 @@ object Form1: TForm1
         Caption = 'Latihan 1'
         OnClick = Latihan11Click
       end
+      object Latihan21: TMenuItem
+        Caption = 'Latihan 2'
+        OnClick = Latihan21Click
+      end
     end
     object Latihan2: TMenuItem
       Caption = 'Tugas Mandiri'
