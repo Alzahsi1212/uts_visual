@@ -12,6 +12,24 @@ object Form1: TForm1
   Font.Style = []
   Menu = MainMenu1
   TextHeight = 15
+  object Panel1: TPanel
+    Left = 208
+    Top = 168
+    Width = 185
+    Height = 41
+    Caption = 'M. Alzahsi Ansari'
+    Color = clWhite
+    ParentBackground = False
+    TabOrder = 0
+  end
+  object Panel2: TPanel
+    Left = 208
+    Top = 208
+    Width = 185
+    Height = 41
+    Caption = '2110010399'
+    TabOrder = 1
+  end
   object MainMenu1: TMainMenu
     object Latihan1: TMenuItem
       Caption = 'Latihan'
@@ -29,6 +47,10 @@ object Form1: TForm1
       object ugas11: TMenuItem
         Caption = 'Tugas 1'
         OnClick = ugas11Click
+      end
+      object ugas21: TMenuItem
+        Caption = 'Tugas 2'
+        OnClick = ugas21Click
       end
     end
   end

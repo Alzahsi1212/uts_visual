@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.ExtCtrls;
 
 type
   TForm1 = class(TForm)
@@ -14,9 +14,13 @@ type
     Latihan11: TMenuItem;
     ugas11: TMenuItem;
     Latihan21: TMenuItem;
+    ugas21: TMenuItem;
+    Panel1: TPanel;
+    Panel2: TPanel;
     procedure Latihan11Click(Sender: TObject);
     procedure ugas11Click(Sender: TObject);
     procedure Latihan21Click(Sender: TObject);
+    procedure ugas21Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -30,7 +34,7 @@ implementation
 
 {$R *.dfm}
 
-uses Unit2, Unit3, Unit4;
+uses Unit2, Unit3, Unit4, Unit5;
 
 procedure TForm1.Latihan11Click(Sender: TObject);
 begin
@@ -45,6 +49,11 @@ end;
 procedure TForm1.ugas11Click(Sender: TObject);
 begin
 Form3.Showmodal;
+end;
+
+procedure TForm1.ugas21Click(Sender: TObject);
+begin
+Form5.ShowModal;
 end;
 
 end.
