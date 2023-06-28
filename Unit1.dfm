@@ -1,56 +1,75 @@
 object Form1: TForm1
-  Left = 0
-  Top = 0
+  Left = 477
+  Top = 161
   Caption = 'Form1'
-  ClientHeight = 442
-  ClientWidth = 628
+  ClientHeight = 246
+  ClientWidth = 462
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -12
-  Font.Name = 'Segoe UI'
+  Font.Height = -11
+  Font.Name = 'Tahoma'
   Font.Style = []
-  Menu = MainMenu1
-  TextHeight = 15
+  Menu = mm1
+  TextHeight = 13
   object Panel1: TPanel
-    Left = 208
-    Top = 168
+    Left = 136
+    Top = 72
     Width = 185
     Height = 41
     Caption = 'M. Alzahsi Ansari'
-    Color = clWhite
-    ParentBackground = False
     TabOrder = 0
   end
   object Panel2: TPanel
-    Left = 208
-    Top = 208
+    Left = 136
+    Top = 112
     Width = 185
     Height = 41
     Caption = '2110010399'
     TabOrder = 1
   end
-  object MainMenu1: TMainMenu
-    object Latihan1: TMenuItem
+  object mm1: TMainMenu
+    Left = 8
+    Top = 8
+    object p1: TMenuItem
       Caption = 'Latihan'
-      object Latihan11: TMenuItem
+      object Kalkulator1: TMenuItem
         Caption = 'Latihan 1'
-        OnClick = Latihan11Click
+        OnClick = Kalkulator1Click
       end
-      object Latihan21: TMenuItem
+      object Latihan2kondisional1: TMenuItem
         Caption = 'Latihan 2'
-        OnClick = Latihan21Click
+        OnClick = Latihan2kondisional1Click
+      end
+      object Grafik1: TMenuItem
+        Caption = 'Latihan 3'
+        object mntmmodule11: TMenuItem
+          Caption = 'module 1'
+          OnClick = mntmmodule11Click
+        end
+        object mntmmodule21: TMenuItem
+          Caption = 'module 2'
+          OnClick = mntmmodule21Click
+        end
+        object mntmmodule31: TMenuItem
+          Caption = 'module 3'
+          OnClick = mntmmodule31Click
+        end
+      end
+      object mntmBasisdata1: TMenuItem
+        Caption = 'Basis data'
+        OnClick = mntmBasisdata1Click
       end
     end
-    object Latihan2: TMenuItem
+    object ugasMandiri1: TMenuItem
       Caption = 'Tugas Mandiri'
-      object ugas11: TMenuItem
-        Caption = 'Tugas 1'
-        OnClick = ugas11Click
+      object Praktekmandiri11: TMenuItem
+        Caption = 'Praktek 1'
+        OnClick = Praktekmandiri11Click
       end
-      object ugas21: TMenuItem
-        Caption = 'Tugas 2'
-        OnClick = ugas21Click
+      object PraktekMandiri21: TMenuItem
+        Caption = 'Praktek 2'
+        OnClick = PraktekMandiri21Click
       end
     end
   end

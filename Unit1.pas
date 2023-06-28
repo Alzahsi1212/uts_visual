@@ -3,24 +3,33 @@ unit Unit1;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.ExtCtrls;
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, Menus, Vcl.ExtCtrls;
 
 type
   TForm1 = class(TForm)
-    MainMenu1: TMainMenu;
-    Latihan1: TMenuItem;
-    Latihan2: TMenuItem;
-    Latihan11: TMenuItem;
-    ugas11: TMenuItem;
-    Latihan21: TMenuItem;
-    ugas21: TMenuItem;
+    mm1: TMainMenu;
+    p1: TMenuItem;
+    Kalkulator1: TMenuItem;
+    Latihan2kondisional1: TMenuItem;
+    Grafik1: TMenuItem;
+    ugasMandiri1: TMenuItem;
+    Praktekmandiri11: TMenuItem;
+    PraktekMandiri21: TMenuItem;
+    mntmmodule11: TMenuItem;
+    mntmmodule21: TMenuItem;
+    mntmmodule31: TMenuItem;
+    mntmBasisdata1: TMenuItem;
     Panel1: TPanel;
     Panel2: TPanel;
-    procedure Latihan11Click(Sender: TObject);
-    procedure ugas11Click(Sender: TObject);
-    procedure Latihan21Click(Sender: TObject);
-    procedure ugas21Click(Sender: TObject);
+    procedure Kalkulator1Click(Sender: TObject);
+    procedure Latihan2kondisional1Click(Sender: TObject);
+    procedure Praktekmandiri11Click(Sender: TObject);
+    procedure PraktekMandiri21Click(Sender: TObject);
+    procedure mntmmodule11Click(Sender: TObject);
+    procedure mntmmodule21Click(Sender: TObject);
+    procedure mntmmodule31Click(Sender: TObject);
+    procedure mntmBasisdata1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -32,28 +41,48 @@ var
 
 implementation
 
+uses Unit2, Unit3, Unit4, Unit5, Unit6, Unit7, Unit8, Unit9;
+
 {$R *.dfm}
 
-uses Unit2, Unit3, Unit4, Unit5;
-
-procedure TForm1.Latihan11Click(Sender: TObject);
+procedure TForm1.Kalkulator1Click(Sender: TObject);
 begin
-Kalkulator.ShowModal;
+form2.show;
 end;
 
-procedure TForm1.Latihan21Click(Sender: TObject);
+procedure TForm1.Latihan2kondisional1Click(Sender: TObject);
 begin
-Form4.ShowModal;
+form3.show;
 end;
 
-procedure TForm1.ugas11Click(Sender: TObject);
+procedure TForm1.Praktekmandiri11Click(Sender: TObject);
 begin
-Form3.Showmodal;
+form5.show;
 end;
 
-procedure TForm1.ugas21Click(Sender: TObject);
+procedure TForm1.PraktekMandiri21Click(Sender: TObject);
 begin
-Form5.ShowModal;
+form6.show;
+end;
+
+procedure TForm1.mntmmodule11Click(Sender: TObject);
+begin
+Form4.Show;
+end;
+
+procedure TForm1.mntmmodule21Click(Sender: TObject);
+begin
+Form7.show;
+end;
+
+procedure TForm1.mntmmodule31Click(Sender: TObject);
+begin
+   form8.show;
+end;
+
+procedure TForm1.mntmBasisdata1Click(Sender: TObject);
+begin
+form9.show;
 end;
 
 end.

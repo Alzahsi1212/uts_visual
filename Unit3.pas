@@ -3,34 +3,33 @@ unit Unit3;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, ExtCtrls, StdCtrls;
 
 type
   TForm3 = class(TForm)
-    Label1: TLabel;
-    Label2: TLabel;
-    Edit2: TEdit;
-    Button1: TButton;
-    GroupBox1: TGroupBox;
-    Label3: TLabel;
-    Label4: TLabel;
-    Label5: TLabel;
-    Label6: TLabel;
-    Edit3: TEdit;
-    Edit4: TEdit;
-    Edit5: TEdit;
-    Edit6: TEdit;
-    Edit1: TEdit;
-    Button2: TButton;
-    Button3: TButton;
-    Button4: TButton;
-    Button5: TButton;
-    procedure Button1Click(Sender: TObject);
-    procedure Button2Click(Sender: TObject);
-    procedure Button3Click(Sender: TObject);
-    procedure Button4Click(Sender: TObject);
-    procedure Button5Click(Sender: TObject);
+    lbl1: TLabel;
+    lbl2: TLabel;
+    lbl3: TLabel;
+    edt1: TEdit;
+    edt2: TEdit;
+    edt3: TEdit;
+    edt4: TEdit;
+    edt5: TEdit;
+    edt6: TEdit;
+    btn1: TButton;
+    btn2: TButton;
+    btn3: TButton;
+    edt7: TEdit;
+    edt8: TEdit;
+    pnl1: TPanel;
+    pnl2: TPanel;
+    pnl3: TPanel;
+    lbl4: TLabel;
+    lbl5: TLabel;
+    procedure btn1Click(Sender: TObject);
+    procedure btn2Click(Sender: TObject);
+    procedure btn3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -44,32 +43,53 @@ implementation
 
 {$R *.dfm}
 
-procedure TForm3.Button1Click(Sender: TObject);
+procedure TForm3.btn1Click(Sender: TObject);
+var
+ nil1, nil2, nil3, hasil : real ;
+ b1, b2, b3 : real;
+ grade :string;
 begin
-Edit3.Text:= IntToStr(StrToInt(Edit1.Text)+strtoint(Edit2.Text));
-Edit4.Text:= IntToStr(StrToInt(Edit1.Text)-strtoint(Edit2.Text));
-Edit5.Text:= IntToStr(StrToInt(Edit1.Text)*strtoint(Edit2.Text));
-Edit6.Text:= FloatToStr(StrToFloat(Edit1.Text)/strtoFloat(Edit2.Text));
+
+ nil1 := strtofloat(edt1.Text);
+ nil2 := strtofloat(edt2.Text);
+ nil3 := strtofloat(edt3.Text);
+
+ b1 := strtofloat(edt4.Text)/100;
+ b2 := strtofloat(edt5.Text)/100;
+ b3 := strtofloat(edt6.Text)/100;
+
+ hasil := nil1*b1 + nil2*b2 + nil3*b3 ;
+
+ if (hasil >= 80) then
+ grade:='A'
+ else
+ if (hasil >= 70) then
+ grade :='B'
+ else
+ if (hasil >= 60) then
+ grade := 'C'
+ else
+ if (hasil >= 50) then
+ grade :='D'
+ else
+ grade :='E';
+
+ edt7.Text := floattostr(hasil);
+ edt8.Text := grade;
+end;
+procedure TForm3.btn2Click(Sender: TObject);
+begin
+ edt1.Text := '0';
+ edt2.Text := '0';
+ edt3.Text := '0';
+ edt7.Text := '';
+ edt8.Text := '';
 end;
 
-procedure TForm3.Button2Click(Sender: TObject);
+procedure TForm3.btn3Click(Sender: TObject);
 begin
-Edit3.Text:= IntToStr(StrToInt(Edit1.Text)+strtoint(Edit2.Text));
-end;
-
-procedure TForm3.Button3Click(Sender: TObject);
-begin
-Edit4.Text:= IntToStr(StrToInt(Edit1.Text)-strtoint(Edit2.Text));
-end;
-
-procedure TForm3.Button4Click(Sender: TObject);
-begin
-Edit5.Text:= IntToStr(StrToInt(Edit1.Text)*strtoint(Edit2.Text));
-end;
-
-procedure TForm3.Button5Click(Sender: TObject);
-begin
-Edit6.Text:= FloatToStr(StrToInt(Edit1.Text)/strtoint(Edit2.Text));
+Application.Terminate;
 end;
 
 end.
+

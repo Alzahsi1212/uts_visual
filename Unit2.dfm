@@ -1,92 +1,76 @@
-object Kalkulator: TKalkulator
-  Left = 0
-  Top = 0
-  Caption = 'Kalkulator'
-  ClientHeight = 442
-  ClientWidth = 628
+object Form2: TForm2
+  Left = 404
+  Top = 204
+  Width = 327
+  Height = 223
+  Caption = 'Form2'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -12
-  Font.Name = 'Segoe UI'
+  Font.Height = -11
+  Font.Name = 'Tahoma'
   Font.Style = []
-  TextHeight = 15
-  object Label1: TLabel
-    Left = 64
-    Top = 104
-    Width = 56
-    Height = 28
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lbl1: TLabel
+    Left = 16
+    Top = 32
+    Width = 28
+    Height = 13
     Caption = 'Nilai 1'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -20
-    Font.Name = 'Segoe UI'
-    Font.Style = []
-    ParentFont = False
   end
-  object Label2: TLabel
-    Left = 64
-    Top = 176
-    Width = 56
-    Height = 28
+  object lbl2: TLabel
+    Left = 16
+    Top = 80
+    Width = 28
+    Height = 13
     Caption = 'Nilai 2'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -20
-    Font.Name = 'Segoe UI'
-    Font.Style = []
-    ParentFont = False
   end
-  object Label3: TLabel
-    Left = 64
-    Top = 240
-    Width = 42
-    Height = 28
+  object lbl3: TLabel
+    Left = 16
+    Top = 136
+    Width = 22
+    Height = 13
     Caption = 'Hasil'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -20
-    Font.Name = 'Segoe UI'
-    Font.Style = []
-    ParentFont = False
   end
-  object Tambah: TButton
-    Left = 336
-    Top = 111
-    Width = 75
-    Height = 25
-    Caption = 'Tambah'
-    TabOrder = 0
-    OnClick = TambahClick
-  end
-  object Selesai: TButton
-    Left = 336
-    Top = 183
-    Width = 75
-    Height = 25
-    Caption = 'Selesai'
-    TabOrder = 1
-    OnClick = SelesaiClick
-  end
-  object Edit1: TEdit
-    Left = 168
-    Top = 112
+  object edt1: TEdit
+    Left = 72
+    Top = 32
     Width = 121
-    Height = 23
+    Height = 21
+    TabOrder = 0
+  end
+  object edt2: TEdit
+    Left = 72
+    Top = 80
+    Width = 121
+    Height = 21
+    TabOrder = 1
+  end
+  object edt3: TEdit
+    Left = 72
+    Top = 136
+    Width = 121
+    Height = 21
     TabOrder = 2
   end
-  object Edit2: TEdit
-    Left = 168
-    Top = 184
-    Width = 121
-    Height = 23
+  object btn1: TButton
+    Left = 216
+    Top = 32
+    Width = 75
+    Height = 49
+    Caption = 'Tambah'
     TabOrder = 3
+    OnClick = btn1Click
   end
-  object Edit3: TEdit
-    Left = 168
-    Top = 248
-    Width = 121
-    Height = 23
+  object btn2: TButton
+    Left = 216
+    Top = 96
+    Width = 75
+    Height = 49
+    Caption = 'Selesai'
     TabOrder = 4
+    OnClick = btn2Click
   end
 end

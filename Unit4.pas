@@ -3,33 +3,30 @@ unit Unit4;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, ExtCtrls, TeeProcs, TeEngine, Chart, Grids, Buttons,
+  Series, TeeFunci;
 
 type
   TForm4 = class(TForm)
-    Label1: TLabel;
-    Label2: TLabel;
-    Label3: TLabel;
-    Label4: TLabel;
-    Label5: TLabel;
-    Panel1: TPanel;
-    Panel2: TPanel;
-    Panel3: TPanel;
-    Edit1: TEdit;
-    Edit2: TEdit;
-    Edit3: TEdit;
-    Edit4: TEdit;
-    Edit5: TEdit;
-    Edit6: TEdit;
-    Edit7: TEdit;
-    Edit8: TEdit;
-    Button1: TButton;
-    Button2: TButton;
-    Button3: TButton;
-    procedure Button1Click(Sender: TObject);
-    procedure Button3Click(Sender: TObject);
-    procedure Button2Click(Sender: TObject);
+    lbl1: TLabel;
+    lbl2: TLabel;
+    edt1: TEdit;
+    strngrd1: TStringGrid;
+    cht1: TChart;
+    btn1: TButton;
+    cbb1: TComboBox;
+    btn5: TBitBtn;
+    btn2: TBitBtn;
+    btn3: TBitBtn;
+    adtfnctnTeeFunction1: TAddTeeFunction;
+    psrsSeries1: TPieSeries;
+    procedure FormCreate(Sender: TObject);
+    procedure btn1Click(Sender: TObject);
+    procedure btn5Click(Sender: TObject);
+    procedure btn3Click(Sender: TObject);
+    procedure btn2Click(Sender: TObject);
+    procedure charadd;
   private
     { Private declarations }
   public
@@ -43,49 +40,47 @@ implementation
 
 {$R *.dfm}
 
-procedure TForm4.Button1Click(Sender: TObject);
-var
-  nil1, nil2, nil3, b1, b2, b3, hasil : real;
-  grade : string;
+procedure TForm4.FormCreate(Sender: TObject);
 begin
-  // berfungsi untuk mengambil data nilai
-  nil1 := strtofloat(Edit1.Text);
-  nil2 := strtofloat(Edit2.Text);
-  nil3 := strtofloat(Edit3.Text);
-  // mengambil pesan data bobot
-  b1 := strtofloat(Edit4.Text)/100;
-  b2 := strtofloat(Edit5.Text)/100;
-  b3 := strtofloat(Edit6.Text)/100;
-  // menghitung nilai akhir
-  hasil := nil1*b1 + nil2*b2 + nil3*b3 ;
-  // menentukan grade nilai
-  if (hasil >= 80) then
-    grade := 'A'
-  else if (hasil >= 70) then
-    grade := 'B'
-  else if (hasil >= 60) then
-    grade := 'C'
-  else if (hasil >= 50) then
-    grade := 'D'
-  else
-    grade := 'E';
-  // Hasil dari proses....
-  Edit7.Text := floattostr(hasil);
-  Edit8.Text := grade;
+ strngrd1.Cells[0,0]:='JENIS PENYAKIT';
+ strngrd1.Cells[0,1]:='COVID 19';
+ strngrd1.Cells[0,2]:='FLU BIASA';
+ strngrd1.Cells[0,3]:='DEMAM';
+ strngrd1.Cells[0,4]:='RINDU';
+ strngrd1.Cells[1,0]:='JUMLAH';
+ cht1.Title.Text.add('GRAFIK INFORMASI JENIS PENYAKIT');
 end;
 
-procedure TForm4.Button2Click(Sender: TObject);
+procedure TForm4.btn1Click(Sender: TObject);
 begin
-Edit1.Text := '0';
-Edit2.Text := '0';
-Edit3.Text := '0';
-Edit7.Text := '';
-Edit8.Text := '';
+  strngrd1.Cells[1,cbb1.ItemIndex+1]:=edt1.Text;
 end;
 
-procedure TForm4.Button3Click(Sender: TObject);
+procedure TForm4.btn5Click(Sender: TObject);
+var i: integer;
 begin
-Application.Terminate;
+for i:=1 to strngrd1.rowcount-1 do
+cht1.Series[0].Add(strtofloat(strngrd1.cells[1,i]),strngrd1.cells[0,i]);
+end;
+procedure TForm4.btn3Click(Sender: TObject);
+begin
+Close;
 end;
 
+procedure TForm4.btn2Click(Sender: TObject);
+begin
+  strngrd1.RowCount:= strngrd1.RowCount -MAX_PATH;
+charadd;
+
+end;
+
+procedure TForm4.charadd;
+var i:Integer;
+begin
+cht1.Series[0].Clear; //membersihkan tampilan char
+for i:=1 to strngrd1.rowcount-1 do
+begin
+ cht1.Series[0].Add(StrToFloat(strngrd1.Cells[1,i]),strngrd1.Cells[2,i]);
+end;
+end;
 end.

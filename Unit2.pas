@@ -3,22 +3,21 @@ unit Unit2;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Mask, Vcl.ExtCtrls,
-  Vcl.DBCtrls;
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls;
 
 type
-  TKalkulator = class(TForm)
-    Label1: TLabel;
-    Label2: TLabel;
-    Label3: TLabel;
-    Tambah: TButton;
-    Selesai: TButton;
-    Edit1: TEdit;
-    Edit2: TEdit;
-    Edit3: TEdit;
-    procedure TambahClick(Sender: TObject);
-    procedure SelesaiClick(Sender: TObject);
+  TForm2 = class(TForm)
+    edt1: TEdit;
+    edt2: TEdit;
+    edt3: TEdit;
+    lbl1: TLabel;
+    lbl2: TLabel;
+    lbl3: TLabel;
+    btn1: TButton;
+    btn2: TButton;
+    procedure btn1Click(Sender: TObject);
+    procedure btn2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -26,20 +25,20 @@ type
   end;
 
 var
-  Kalkulator: TKalkulator;
+  Form2: TForm2;
 
 implementation
 
 {$R *.dfm}
 
-procedure TKalkulator.SelesaiClick(Sender: TObject);
+procedure TForm2.btn1Click(Sender: TObject);
 begin
-Close;
+edt3.Text:=IntToStr(StrToInt(edt1.text)+strtoint(edt2.Text));
 end;
 
-procedure TKalkulator.TambahClick(Sender: TObject);
+procedure TForm2.btn2Click(Sender: TObject);
 begin
-Edit3.Text:=IntToStr(StrToInt(Edit1.text)+strtoint(Edit2.Text));
+  Close;
 end;
 
 end.
